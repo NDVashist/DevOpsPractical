@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven 'maven1'
+        maven 'M1'
     }
     stages {
         stage('fetch') {
