@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo 'Fetching the Maven Project from github'
                 git branch: 'main',
-                url: 'https://github.com/Gauravkumar1502/DevOpsPractical'
+                url: 'https://github.com/NDVashist/DevOpsPractical.git'
             }
         }
         stage('validate') {
