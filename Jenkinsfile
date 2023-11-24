@@ -14,49 +14,49 @@ pipeline {
         stage('validate') {
             steps {
                 echo 'Validating the Maven Project'
-                sh 'mvn validate'
+                bat 'mvn validate'
             }
         }
         stage('clean') {
             steps {
                 echo 'Cleaning the Maven Project'
-                sh 'mvn clean'
+                bat 'mvn clean'
             }
         }
         stage('compile') {
             steps {
                 echo 'Compiling the Maven Project'
-                sh 'mvn compile'
+                bat 'mvn compile'
             }
         }
         stage('test') {
             steps {
                 echo 'Testing the Maven Project'
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
         stage('package') {
             steps {
                 echo 'Packaging the Maven Project'
-                sh 'mvn package'
+                bat 'mvn package'
             }
         }
         stage('verify') {
             steps {
                 echo 'Verifying the Maven Project'
-                sh 'mvn verify'
+                bat 'mvn verify'
             }
         }
         stage('install') {
             steps {
                 echo 'Installing the Maven Project'
-                sh 'mvn install'
+                bat 'mvn install'
             }
         }
         stage('executing generate jar') {
             steps {
                 echo 'Executing the generate jar file'
-                sh 'java -jar ./target/Sum.jar 10 25 30 55 67 89'
+                bat 'java -jar ./target/Sum.jar 10 25 30 55 67 89'
             }
         }
     }
