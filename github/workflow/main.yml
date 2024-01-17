@@ -1,0 +1,16 @@
+name: java CI with Maven
+
+on:
+ push:
+    branches: ["main"]
+
+jobs:
+  build:
+
+   runs-on: ubuntu-latest
+
+   steps:
+    -name: Echoing name
+     run: echo "Nikhil Dhiman"
+
+    
