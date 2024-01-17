@@ -10,7 +10,7 @@ jobs:
    runs-on: ubuntu-latest
 
    steps:
-    -name: Echoing name
-     run: echo "Nikhil Dhiman"
+    - name: Echoing name
+      run: echo "nikhil dhiman"
 
     
