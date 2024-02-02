@@ -1,16 +1,32 @@
-name: java CI with Maven
-
+name: Build Workflow
 on:
- push:
-    branches: ["main"]
-
+  push:
+    branches:
+      - main
 jobs:
   build:
-
-   runs-on: ubuntu-latest
-
-   steps:
-    - name: Echoing name
-      run: echo "nikhil dhiman"
-
-    
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+      - name: Clean
+        run: mvn clean 
+      - name: Validate
+        run: mvn validate 
+      - name: Compile 
+        run: mvn compile 
+      - name: Test
+        run: mvn test 
+      - name: Package
+        run: mvn package 
+      - name: integration-test 
+        run: mvn integration-test 
+      - name: Verify 
+        run: mvn verify
+      - name: Install
+        run: mvn install 
